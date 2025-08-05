@@ -39,6 +39,6 @@ export class OrdersController {
 
   @EventPattern('payment.succeeded')
   paidOrder(@Payload() paidOrderDto: PaidOrderDto) {
-    return;
+    return this.ordersService.paidOrder(paidOrderDto);
   }
 }
